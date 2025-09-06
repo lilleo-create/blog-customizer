@@ -5,7 +5,10 @@ import clsx from 'clsx';
 
 import { Article } from './components/article/Article';
 import { ArticleParamsForm } from './components/article-params-form/ArticleParamsForm';
-import { defaultArticleState, ArticleStateType } from './constants/articleProps';
+import {
+	defaultArticleState,
+	ArticleStateType,
+} from './constants/articleProps';
 
 import './styles/index.scss';
 import styles from './styles/index.module.scss';
@@ -15,7 +18,8 @@ const root = createRoot(domNode);
 
 const App = () => {
 	const [isOpen, setIsOpen] = useState(false);
-	const [articleSettings, setArticleSettings] = useState<ArticleStateType>(defaultArticleState);
+	const [articleSettings, setArticleSettings] =
+		useState<ArticleStateType>(defaultArticleState);
 
 	const handleApply = (nextSettings: ArticleStateType) => {
 		setArticleSettings(nextSettings);
@@ -42,9 +46,7 @@ const App = () => {
 					'--container-width': articleSettings.contentWidth.value,
 					'--bg-color': articleSettings.backgroundColor.value,
 				} as CSSProperties
-			}
-		>
-
+			}>
 			{!isOpen && (
 				<div className={styles.arrowButtonWrapper}>
 					<ArrowButton isOpen={false} onClick={() => setIsOpen(true)} />
