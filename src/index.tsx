@@ -9,6 +9,7 @@ import {
 	defaultArticleState,
 	ArticleStateType,
 } from './constants/articleProps';
+import { RadioGroup } from 'src/ui/radio-group/RadioGroup';
 
 import './styles/index.scss';
 import styles from './styles/index.module.scss';
@@ -17,6 +18,12 @@ const domNode = document.getElementById('root') as HTMLDivElement;
 const root = createRoot(domNode);
 
 const App = () => {
+	const fontSizeOptions = [
+		{ title: '38px', value: '38px', className: '' },
+		{ title: '40px', value: '40px', className: '' },
+		{ title: '42px', value: '42px', className: '' },
+	];
+	const [selectedSize, setSelectedSize] = useState(fontSizeOptions[0]);
 	const [isOpen, setIsOpen] = useState(false);
 	const [articleSettings, setArticleSettings] =
 		useState<ArticleStateType>(defaultArticleState);
@@ -64,6 +71,13 @@ const App = () => {
 			)}
 
 			<Article />
+			<RadioGroup
+				name='radio'
+				title='Размер шрифта'
+				options={fontSizeOptions}
+				selected={selectedSize}
+				onChange={setSelectedSize}
+			/>
 		</main>
 	);
 };
