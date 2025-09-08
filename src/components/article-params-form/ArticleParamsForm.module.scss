@@ -16,6 +16,7 @@
 	display: flex;
 	flex-shrink: 0;
 	flex-direction: column;
+	gap: 50px;
 	box-sizing: border-box;
 	width: 616px;
 	height: auto;
@@ -29,4 +30,21 @@
 	display: flex;
 	justify-content: space-between;
 	margin-top: auto;
+}
+
+.title {
+	font-weight: 800;
+	font-size: 31px;
+	text-transform: uppercase;
+}
+
+.section {
+	margin-bottom: 32px;
+}
+
+.sectionTitle {
+	margin-bottom: 12px;
+	font-weight: 700;
+	font-size: 14px;
+	text-transform: uppercase;
 }

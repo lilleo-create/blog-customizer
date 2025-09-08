@@ -12,10 +12,10 @@ type Story = StoryObj<typeof RadioGroup>;
 
 const RadioGroupWithState = () => {
 	const options = [
-		{ title: '1 опция', value: '1 опция', className: '' },
-		{ title: '2 опция', value: '2 опция', className: '' },
-		{ title: '3 опция', value: '3 опция', className: '' },
-		{ title: '4 опция', value: '4 опция', className: '' },
+		{ title: '38px', value: '38px', className: '' },
+		{ title: '40px', value: '40px', className: '' },
+		{ title: '42px', value: '42px', className: '' },
+		{ title: '44px', value: '44px', className: '' },
 	];
 	const [selected, setSelected] = useState(options[0]);
 
